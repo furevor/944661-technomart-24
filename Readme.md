@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Владимир Ерыгин](https://up.htmlacademy.ru/htmlcss/24/user/944661).
-* Наставник: `Неизвестно`.
+* Наставник: [Vladislav Rostov](https://htmlacademy.ru/profile/id425565).
 
 ---
 
