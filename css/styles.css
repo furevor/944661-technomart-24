@@ -33,3 +33,8 @@
 .new-item::before {
   /*place here styles for red label "new"*/
 }
+
+/*temporarily styles for new icon*/
+.new-item h3 a {
+  color: red;
+}
