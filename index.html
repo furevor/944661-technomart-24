@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -11,7 +12,7 @@
           <img src="img/index-logo.svg" width="368" height="153" alt="ТЕХНОМАРТ">
         </a>
         <p>
-          <label for="search-items">Поиска</label>
+          <label for="search-items">Поиск:</label>
           <input id="search-items" type="search">
         </p>
         <a href="#" class="bookmarks">Закладки: 0</a>
@@ -26,13 +27,13 @@
           <span>+7 (812) 555-05-55</span>
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </p>
-        <ul class="log-in-out">
-          <li class="button button-login">Войти</li>
-          <li class="button button-registration">Регистрация</li>
+        <ul class="vertical-list log-in-out">
+          <li><a class="button button-login" href="#">Войти</a></li>
+          <li><a class="button button-registration" href="#">Регистрация</a></li>
         </ul>
       </section>
       <nav class="main-navigation">
-        <ul class="site-navigation">
+        <ul class="vertical-list site-navigation">
           <li><a href="#">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="#">Каталог</a></li>
@@ -48,10 +49,8 @@
     </main>
     <footer class="main-footer">
       <section class="footer-navigation">
-        <a class="footer-logo">
-          <img src="img/index-logo.svg" width="368" height="183" alt="ТЕХНОМАРТ">
-        </a>
-        <ul class="site-nav">
+        <img class="footer-logo" src="img/index-logo.svg" width="368" height="183" alt="ТЕХНОМАРТ">
+        <ul class="vertical-list site-nav">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Каталог</a></li>
@@ -62,7 +61,7 @@
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           <span>+7 (812) 555-05-55</span>
         </p>
-        <ul class="site-offer">
+        <ul class="vertical-list site-offer">
           <li><a href="#">Материалы</a></li>
           <li><a href="#">Техника</a></li>
           <li><a href="#">Инструмент</a></li>
@@ -74,7 +73,7 @@
           <span>© 2010–2019 Компания «Техномарт»</span>
           <span>Все права защищены</span>
         </p>
-        <ul class="socials">
+        <ul class="vertical-list socials">
           <li><a href="#"><img src="img/social-vk.jpg" alt="Вконтакте" width="20" height="20"></a></li>
           <li><a href="#"><img src="img/social-fb.jpg" alt="Фейсбук" width="20" height="20"></a></li>
           <li><a href="#"><img src="img/social-inst.jpg" alt="Инстаграм" width="20" height="20"></a></li>

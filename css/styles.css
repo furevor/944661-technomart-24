@@ -1,3 +1,19 @@
 .developers-info a {
   /*place here styles for yellow footer links*/
 }
+
+.vertical-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.vertical-list li{
+  display: inline-block;
+}
+
+.vertical-list a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 15px;
+}
