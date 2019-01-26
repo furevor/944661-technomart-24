@@ -21,3 +21,15 @@
 .company-address {
   font-style: normal;
 }
+
+.filter {
+  border-bottom: 1px gray solid;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.new-item::before {
+  /*place here styles for red label "new"*/
+}
