@@ -59,21 +59,23 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет раздел фильтра с ценой -->
-        <section class="filter producers">
-          <h3>ПРОИЗВОДИТЕЛИ:</h3>
-          <input type="checkbox" id="bosch" name="bosch" checked><label for="bosch">BOSCH</label>
-          <input type="checkbox" id="interskol" name="interskol"><label for="interskol">ИНТЕРСКОЛ</label>
-          <input type="checkbox" id="makita" name="makita" checked><label for="makita">MAKITA</label>
-          <input type="checkbox" id="dewalt" name="dewalt"><label for="dewalt">DEWALT</label>
-          <input type="checkbox" id="hitachi" name="hitachi"><label for="hitachi">HITACHI</label>
-        </section>
-        <section class="filter product-type">
-          <h3>ПИТАНИЕ:</h3>
-          <input type="radio" id="battery" name="power-type" value="battery" checked><label for="battery">АККУМУЛЯТОРНЫЕ</label>
-          <input type="radio" id="networked" name="power-type" value="networked"><label for="networked">СЕТЕВЫЕ</label>
-        </section>
-        <button type="button" class="show-products">ПОКАЗАТЬ</button>
+        <form action="/filter-products" method="post">
+          <!-- Здесь будет раздел фильтра с ценой -->
+          <fieldset class="filter producers">
+            <h3>ПРОИЗВОДИТЕЛИ:</h3>
+            <input type="checkbox" id="bosch" name="bosch" checked><label for="bosch">BOSCH</label>
+            <input type="checkbox" id="interskol" name="interskol"><label for="interskol">ИНТЕРСКОЛ</label>
+            <input type="checkbox" id="makita" name="makita" checked><label for="makita">MAKITA</label>
+            <input type="checkbox" id="dewalt" name="dewalt"><label for="dewalt">DEWALT</label>
+            <input type="checkbox" id="hitachi" name="hitachi"><label for="hitachi">HITACHI</label>
+          </fieldset>
+          <fieldset class="filter product-type">
+            <h3>ПИТАНИЕ:</h3>
+            <input type="radio" id="battery" name="power-type" value="battery" checked><label for="battery">АККУМУЛЯТОРНЫЕ</label>
+            <input type="radio" id="networked" name="power-type" value="networked"><label for="networked">СЕТЕВЫЕ</label>
+          </fieldset>
+          <input type="submit" class="show-products" value="ПОКАЗАТЬ">
+        </form>
       </section>
 
       <section class="catalog">
