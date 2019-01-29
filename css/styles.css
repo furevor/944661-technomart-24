@@ -1,3 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header, main, .main-footer {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .developers-info a {
   /*place here styles for yellow footer links*/
 }
