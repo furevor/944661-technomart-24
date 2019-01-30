@@ -1,6 +1,19 @@
+@font-face {
+  font-family: "Cuprum";
+  src: url("/fonts/cuprum.woff") format("woff");
+}
+
 body {
   margin: 0;
   padding: 0;
+}
+
+a {
+  cursor: pointer;
+  font-family: "Cuprum", sans-serif;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
 }
 
 .main-header, main, .main-footer {
@@ -48,3 +61,69 @@ body {
 .new-item h3 a {
   color: red;
 }
+
+.controls-header {
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #293449;
+  color: white;
+  padding: 0 130px;
+}
+
+.controls-header a {
+  color: white;
+  text-decoration: none;
+  /*text-align: center;*/
+  padding-top: 11px;
+}
+
+.main-header-logo {
+  width: 220px;
+  background-color: #ee3643;
+  box-shadow: 0 5px 0 0px #b52933;
+  text-align: center;
+}
+
+.main-header-logo:hover {
+  background-color: #ca2c37;
+}
+
+.main-header-logo img {
+  /*padding-top: 13px;*/
+}
+
+.button-order {
+  width: 150px;
+  background-color: #63a63e;
+}
+
+.button-order:hover {
+  background-color: #5fbb2d;
+}
+
+.search-items {
+  margin: 0;
+  width: 270px;
+}
+
+.cart, .bookmarks {
+  width: 150px;
+}
+
+.search-items input {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  height: 100%;
+}
+
+.search-items input:focus {
+  background: white;
+}
+
+/*.bookmarks::before {*/
+  /*content: "";*/
+  /*background-image: url("/img/icon-bookmark.svg");*/
+/*}*/
