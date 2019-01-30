@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Cuprum";
-  src: url("/fonts/cuprum.woff") format("woff");
+  src: url("../fonts/cuprum.woff") format("woff");
 }
 
 body {
@@ -11,9 +11,6 @@ body {
 a {
   cursor: pointer;
   font-family: "Cuprum", sans-serif;
-  /*display: flex;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
 }
 
 .main-header, main, .main-footer {
@@ -74,11 +71,11 @@ a {
 .controls-header a {
   color: white;
   text-decoration: none;
-  /*text-align: center;*/
+  text-align: center;
   padding-top: 11px;
 }
 
-.main-header-logo {
+.main-header-logo, .footer-logo {
   width: 220px;
   background-color: #ee3643;
   box-shadow: 0 5px 0 0px #b52933;
