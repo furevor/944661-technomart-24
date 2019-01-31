@@ -6,11 +6,11 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Cuprum", sans-serif;
 }
 
 a {
   cursor: pointer;
-  font-family: "Cuprum", sans-serif;
 }
 
 .main-header, main, .main-footer {
@@ -35,7 +35,6 @@ a {
 .vertical-list a {
   display: block;
   text-decoration: none;
-  padding: 10px 15px;
 }
 
 .company-address {
@@ -120,7 +119,18 @@ a {
   background: white;
 }
 
-/*.bookmarks::before {*/
-  /*content: "";*/
-  /*background-image: url("/img/icon-bookmark.svg");*/
-/*}*/
+.site-navigation {
+  width: 940px;
+  height: 55px;
+  margin: 0 auto;
+  background-color: #32425c;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-navigation a {
+  text-align: center;
+  font-size: 17px;
+  color: white
+}
