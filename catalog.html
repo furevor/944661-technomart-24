@@ -59,28 +59,51 @@
         <li><a href="index.html"><img src="home-img.svg" alt="Главная"></a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
-        <li>ПЕРФОРАТОРЫ</li>
+        <li class="breadcrumbs-current">ПЕРФОРАТОРЫ</li>
       </ul>
       <h2 class="catalog-name">ПЕРФОРАТОРЫ</h2>
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form action="/filter-products" method="post">
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
           <!-- Здесь будет раздел фильтра с ценой -->
           <fieldset class="filter producers">
-            <h3>ПРОИЗВОДИТЕЛИ:</h3>
-            <input type="checkbox" id="bosch" name="bosch" checked><label for="bosch">BOSCH</label>
-            <input type="checkbox" id="interskol" name="interskol"><label for="interskol">ИНТЕРСКОЛ</label>
-            <input type="checkbox" id="makita" name="makita" checked><label for="makita">MAKITA</label>
-            <input type="checkbox" id="dewalt" name="dewalt"><label for="dewalt">DEWALT</label>
-            <input type="checkbox" id="hitachi" name="hitachi"><label for="hitachi">HITACHI</label>
+            <legend>ПРОИЗВОДИТЕЛИ:</legend>
+            <ul>
+              <li>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="bosch" name="bosch" checked>
+                <label for="bosch">BOSCH</label>
+              </li>
+              <li>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="interskol" name="interskol">
+                <label for="interskol">ИНТЕРСКОЛ</label>
+              </li>
+              <li>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="makita" name="makita" checked>
+                <label for="makita">MAKITA</label>
+              </li>
+              <li>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="dewalt" name="dewalt">
+                <label for="dewalt">DEWALT</label>
+              </li>
+              <li>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="hitachi" name="hitachi">
+                <label for="hitachi">HITACHI</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="filter product-type">
-            <h3>ПИТАНИЕ:</h3>
-            <input type="radio" id="battery" name="power-type" value="battery" checked><label for="battery">АККУМУЛЯТОРНЫЕ</label>
-            <input type="radio" id="networked" name="power-type" value="networked"><label for="networked">СЕТЕВЫЕ</label>
+            <legend>ПИТАНИЕ:</legend>
+            <ul>
+              <li class="filter-option">
+                <input type="radio" id="battery" name="power-type" value="battery" checked><label for="battery">АККУМУЛЯТОРНЫЕ</label>
+              </li>
+              <li class="filter-option">
+                <input type="radio" id="networked" name="power-type" value="networked"><label for="networked">СЕТЕВЫЕ</label>
+              </li>
+            </ul>
           </fieldset>
-          <input type="submit" class="show-products" value="ПОКАЗАТЬ">
+          <button type="submit" class="button filter-button">ПОКАЗАТЬ</button>
         </form>
       </section>
 
@@ -282,5 +305,14 @@
         </p>
       </section>
     </footer>
+
+    <section class="modal modal-product-added">
+      <p>
+        <span>Товар добавлен в корзину</span>
+      </p>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <a class="button button-modal-order">ОФОРМИТЬ ЗАКАЗ</a>
+      <button class="modal-close" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+    </section>
   </body>
 </html>
