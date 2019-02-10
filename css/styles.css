@@ -198,7 +198,7 @@ a {
 /* header styles --> */
 
 /* <-- main styles */
-main {
+.container {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
