@@ -1122,7 +1122,7 @@ a {
   margin: 0;
   padding: 0;
   border: 0;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   border-bottom: 1px #e5e5e5 solid;
 }
 
@@ -1176,29 +1176,70 @@ a {
   padding: 0;
   list-style: none;
 }
+
+.producers li {
+  padding-left: 35px;
+}
+
 .controls-list li {
   margin-bottom: 20px;
-}
-
-.filter-input-checkbox + label:before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: 0;
-  width: 28px;
-  height: 23px;
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-}
-
-.filter-input-checkbox + label {
   position: relative;
-  padding: 0 0 0 33px;
+}
+
+.producers label {
   cursor: pointer;
 }
 
-.filter-input-checkbox:checked + label:before {
-  background-image: url("../img/checkbox-on.svg");
+
+.filter-input-checkbox + .checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 19px;
+  height: 18px;
+
+  border: 2px solid #c5c5c5;
+  border-radius: 3px;
+  display: block;
+}
+
+.filter-input-checkbox + .checkbox-indicator::before,
+.filter-input-checkbox + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.filter-input-checkbox:checked + .checkbox-indicator::before,
+.filter-input-checkbox:checked + .checkbox-indicator::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 1px;
+
+  width: 15px;
+  height: 2px;
+
+  background-color: #c5c5c5;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.filter-input-checkbox:checked + .checkbox-indicator::before {
+  transform: rotate(45deg);
+  left: 2px;
+  height: 4px;
+  width: 10px;
+}
+
+.filter-input-checkbox:checked + .checkbox-indicator::after {
+  transform: rotate(-45deg);
+  left: 6px;
+  top: 4px;
+  height: 4px;
+  width: 20px;
 }
 
 .filter-option .radio + label {
@@ -1303,7 +1344,7 @@ a {
 }
 
 .min-max-price {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 
   display: flex;
   justify-content: space-between;
