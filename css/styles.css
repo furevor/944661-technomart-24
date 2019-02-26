@@ -1010,7 +1010,7 @@ a {
   display: block;
 }
 
-.catalog-item .actions .bookmark {
+.catalog-item .bookmark {
   color: #32425c;
   background: white;
   border-bottom-color: #63a63e;
@@ -1248,7 +1248,7 @@ a {
   cursor: pointer;
 }
 
-.filter-option .radio + label:before {
+.radio + label:before {
   content: '';
   position: absolute;
   top: -3px;
@@ -1259,7 +1259,7 @@ a {
   border-radius: 50%;
 }
 
-.filter-option .radio + label:after {
+.radio + label:after {
   content: '';
   position: absolute;
   top: 5px;
@@ -1410,9 +1410,8 @@ a {
 
 /* <-- styles for input[type=range] */
 .range-price input {
-
-width: 70%;
-background: transparent;
+  width: 70%;
+  background: transparent;
 }
 
 .range-price input::-webkit-slider-thumb {
@@ -1436,11 +1435,10 @@ background: transparent;
   border-radius: 3px;
   background: url('../img/filter-button.svg') no-repeat center;
   cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d; /* Add cool effects to your sliders! */
+  margin-top: -14px;
+  box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
 }
 
-/* All the same stuff for Firefox */
 .range-price input::-moz-range-thumb {
   box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
   border: 1px solid #000000;
@@ -1451,7 +1449,6 @@ background: transparent;
   cursor: pointer;
 }
 
-/* All the same stuff for IE */
 .range-price input::-ms-thumb {
   box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
   border: 1px solid #000000;
@@ -1461,5 +1458,4 @@ background: transparent;
   background: url('../img/filter-button.svg') no-repeat center;
   cursor: pointer;
 }
-
 /* styles for input[type=range] --> */
