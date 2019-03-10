@@ -14,7 +14,7 @@
           <img src="img/logo-technomart.svg" width="110" height="18" alt="ТЕХНОМАРТ">
         </a>
         <p class="search-items">
-          <input id="search-items" type="search" placeholder="Поиск">
+          <input id="search-items" type="search" placeholder="Поиск:">
           <label for="search-items" class="search-icon"></label>
         </p>
         <a href="#" class="bookmarks">Закладки: 0</a>
@@ -23,20 +23,25 @@
       </div>
       <section class="intro-title">
         <h1 class="main-title">
-          Интернет-магазин строительных материалов и&#160;инструментов&#160;для&#160;ремонта
+          Интернет-магазин строительных материалов и инструментов для ремонта
         </h1>
         <div class="header-contacts">
           <span>+7 (812) 555-05-55</span>
           <address class="company-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
-        <p class="user-info">
-          <a href="#" class="button profile-button">
-            Равшан Джамшутович
-          </a>
-          <a href="#" class="exit-button"></a>
-          <a href="#" class="user-link">Мои заказы</a>
-          <a href="#" class="user-link">Личный кабинет</a>
-        </p>
+        <div class="user-info">
+          <p>
+            <a href="#" class="profile-button">
+              Равшан Джамшутович
+            </a>
+            <a href="#" class="exit-button"></a>
+          </p>
+          <p>
+            <a href="#" class="user-link orders">Мои заказы</a>
+            <a href="#" class="user-link account">Личный кабинет</a>
+          </p>
+        </div>
+
       </section>
       <nav class="main-navigation">
         <ul class="vertical-list site-navigation">
@@ -145,7 +150,7 @@
 
         <section class="catalog">
           <h2 class="visually-hidden">Список отфильтрованных товаров</h2>
-          <ul class="cards-list">
+          <ul class="cards-list catalog-list">
             <li class="catalog-item">
               <div class="actions">
                 <a href="#" class="buy">Купить</a>

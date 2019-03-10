@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="js/scripts.js"></script>
   </head>
   <body>
     <header class="main-header">
@@ -14,7 +15,7 @@
           <img src="img/logo-technomart.svg" width="110" height="18" alt="ТЕХНОМАРТ">
         </a>
         <p class="search-items">
-          <input id="search-items" type="search" placeholder="Поиск">
+          <input id="search-items" type="search" placeholder="Поиск:">
           <label for="search-items" class="search-icon"></label>
         </p>
         <a href="#" class="bookmarks">Закладки: 0</a>
@@ -62,7 +63,8 @@
             <p>Техника</p>
             <a href="#" class="button">Для стройки</a>
           </div>
-          <div class="services-slider"></div>
+          <div class="services-slider">
+          </div>
           <div>
             <div class="service-card card-discounts">
               <p>Скидки 50%</p>
@@ -82,9 +84,25 @@
         </div>
         <ul class="cards-list popular-list">
           <li class="catalog-item">
-            <a href="catalog-item.html">
-              <img src="img/perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-            </a>
+            <div class="actions">
+              <a href="#" class="buy">Купить</a>
+              <a href="#" class="bookmark">В закладки</a>
+            </div>
+            <img src="img/perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+            <h3>
+              <a href="catalog-item.html" class="card-item-name">
+                Перфоратор BOSCH BFG 9000
+              </a>
+            </h3>
+            <span class="old-price">32500 Р.</span>
+            <span class="current-price">25500 Р.</span>
+          </li>
+          <li class="catalog-item">
+            <div class="actions">
+              <a href="#" class="buy">Купить</a>
+              <a href="#" class="bookmark">В закладки</a>
+            </div>
+            <img src="img/perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <h3>
               <a href="catalog-item.html" class="card-item-name">
                 Перфоратор BOSCH BFG 3000
@@ -94,9 +112,11 @@
             <span class="current-price">15500 Р.</span>
           </li>
           <li class="catalog-item">
-            <a href="catalog-item.html">
-              <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-            </a>
+            <div class="actions">
+              <a href="#" class="buy">Купить</a>
+              <a href="#" class="bookmark">В закладки</a>
+            </div>
+            <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <h3>
               <a href="catalog-item.html" class="card-item-name">
                 Перфоратор BOSCH BFG 6000
@@ -105,29 +125,19 @@
             <span class="old-price">30500 Р.</span>
             <span class="current-price">25500 Р.</span>
           </li>
-          <li class="catalog-item">
-            <a href="catalog-item.html">
-              <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-            </a>
+          <li class="catalog-item new-item">
+            <div class="actions">
+              <a href="#" class="buy">Купить</a>
+              <a href="#" class="bookmark">В закладки</a>
+            </div>
+            <img src="img/perforator_4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <h3>
               <a href="catalog-item.html" class="card-item-name">
-                Перфоратор BOSCH BFG 6000
+                Перфоратор BOSCH BFG 2000
               </a>
             </h3>
-            <span class="old-price">30500 Р.</span>
-            <span class="current-price">25500 Р.</span>
-          </li>
-          <li class="catalog-item">
-            <a href="catalog-item.html">
-              <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-            </a>
-            <h3>
-              <a href="catalog-item.html" class="card-item-name">
-                Перфоратор BOSCH BFG 6000
-              </a>
-            </h3>
-            <span class="old-price">30500 Р.</span>
-            <span class="current-price">25500 Р.</span>
+            <span class="old-price"></span>
+            <span class="current-price">12500 Р.</span>
           </li>
         </ul>
       </section>
@@ -158,15 +168,30 @@
         </div>
         <div class="services-content">
           <div id="content-toggle" class="content-toggle">
-            <input class="visually-hidden radio" type="radio" id="delivery" name="content-type" value="delivery" checked><label for="delivery">Доставка</label>
-            <input class="visually-hidden radio" type="radio" id="warranty" name="content-type" value="warranty"><label for="warranty">Гарантия</label>
-            <input class="visually-hidden radio" type="radio" id="credit" name="content-type" value="credit"><label for="credit">Кредит</label>
+            <input class="visually-hidden radio-toggle" type="radio" id="delivery" name="content-type" value="delivery" checked><label for="delivery">Доставка</label>
+            <input class="visually-hidden radio-toggle" type="radio" id="guarantee" name="content-type" value="guarantee"><label for="guarantee">Гарантия</label>
+            <input class="visually-hidden radio-toggle" type="radio" id="credit" name="content-type" value="credit"><label for="credit">Кредит</label>
           </div>
-          <div class="toggle delivery-description">
+          <div class="toggle services-delivery">
             <h3>ДОСТАВКА</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо
               к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+            </p>
+          </div>
+          <div class="toggle services-guarantee hidden">
+            <h3>ГАРАНТИЯ</h3>
+            <p>
+              Если купленный у нас товар поломается или заискрит,
+              а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+              Дом уж восстановите как-нибудь сами.
+            </p>
+          </div>
+          <div class="toggle services-credit hidden">
+            <h3>КРЕДИТ</h3>
+            <p>
+              Залезть в долговую яму стало проще!
+              Кредитные консультанты придут вам на помощь.
             </p>
           </div>
         </div>
@@ -196,10 +221,10 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис:<br>
           </p>
-          <a href="#" aria-label="Сервис карт">
+          <a href="#" class="button-map" aria-label="Сервис карт">
             <img class="map-img" src="img/map.jpg" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
           </a>
-          <a href="#" class="button button-red">Заблудились? Напишите нам!</a>
+          <a href="#" class="button button-red btn-write-us-open">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -265,19 +290,25 @@
       <h2 class="visually-hidden">Свяжитесь с нами</h2>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="user-name">Ваше имя:</label>
-          <input class="user-name" id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="user-email">Ваш e-mail:</label>
-          <input class="user-email" id="user-email" type="text" name="user-email" placeholder="email@example.com">
-        </p>
-        <p class="login-password-info">
-          <label for="user-letter">Текст письма:</label>
-          <textarea  id="user-letter" name="user-letter"></textarea>
-        </p>
-        <button class="button button-write-us" type="submit">Отправить</button>
+        <fieldset class="form-data">
+          <div class="users-data">
+            <p>
+              <label class="user-input-label" for="user-name">Ваше имя:</label>
+              <input class="user-data-popup" id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+            </p>
+            <p>
+              <label class="user-input-label" for="user-email">Ваш e-mail:</label>
+              <input class="user-data-popup" id="user-email" type="text" name="user-email" placeholder="email@example.com">
+            </p>
+          </div>
+          <p class="login-password-info">
+            <label class="user-input-label" for="user-letter">Текст письма:</label>
+            <textarea id="user-letter" class="user-letter" name="user-letter"></textarea>
+          </p>
+        </fieldset>
+        <div class="submit-button">
+          <button class="button button-red button-write-us" type="submit">Отправить</button>
+        </div>
       </form>
     </section>
   </body>
