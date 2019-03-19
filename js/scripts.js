@@ -28,19 +28,18 @@ function assignModalClose(modalClose, popup) {
 
 function initializeRadioInputs() {
   var radio = document.querySelectorAll('input[name=content-type]');
-  var prev = document.querySelector('input[checked]');
+  var servicesSection = document.querySelector('.services');
+  var prev = servicesSection.querySelector('input[checked]');
 
   for(var i = 0; i < radio.length; i++) {
     radio[i].onclick = function () {
       var prevContentElement;
       var currentContentElement;
 
-      if(prev) {
+      if(prev && this !== prev) {
         prevContentElement = document.querySelector('.services-' + prev.value);
         prevContentElement.classList.add('hidden');
-      }
 
-      if(this !== prev) {
         currentContentElement = document.querySelector('.services-' + this.value);
         currentContentElement.classList.remove('hidden');
         prev = this;
