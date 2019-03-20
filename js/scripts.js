@@ -3,20 +3,42 @@ document.addEventListener('DOMContentLoaded', function(){
 
   var writeUsLink = document.querySelector('.btn-write-us-open');
   var mapLink = document.querySelector('.button-map');
+  var buyProduct = document.querySelectorAll('.buy');
 
   assignModalOpen(writeUsLink, '.modal-write-us');
   assignModalOpen(mapLink, '.modal-map');
+  assignModalProductsOpen(buyProduct, '.modal-product-added');
 
 });
 
 function assignModalOpen(buttonOpen, modalToOpen) {
-  buttonOpen.onclick = function (evt) {
-    evt.preventDefault();
+  if(buttonOpen) {
+
     var popup = document.querySelector(modalToOpen);
-    popup.classList.add("modal-show");
     var modalClose = popup.querySelector('.modal-close');
     assignModalClose(modalClose, popup);
-  };
+
+    buttonOpen.onclick = function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+    };
+  }
+}
+
+function assignModalProductsOpen(buttonOpen, modalToOpen) {
+  if(buttonOpen) {
+
+    var popup = document.querySelector(modalToOpen);
+    var modalClose = popup.querySelector('.modal-close');
+    assignModalClose(modalClose, popup);
+
+    buttonOpen.forEach(function (item) {
+      item.onclick = function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+      };
+    })
+  }
 }
 
 function assignModalClose(modalClose, popup) {
@@ -29,6 +51,9 @@ function assignModalClose(modalClose, popup) {
 function initializeRadioInputs() {
   var radio = document.querySelectorAll('input[name=content-type]');
   var servicesSection = document.querySelector('.services');
+  if(!servicesSection) {
+    return;
+  }
   var prev = servicesSection.querySelector('input[checked]');
 
   for(var i = 0; i < radio.length; i++) {

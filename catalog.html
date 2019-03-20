@@ -6,11 +6,12 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="js/scripts.js"></script>
   </head>
   <body>
     <header class="main-header">
       <div class="controls-header">
-        <a class="logo" aria-label="логотип компании">
+        <a href="index.html" class="logo" aria-label="логотип компании">
           <img src="img/logo-technomart.svg" width="110" height="18" alt="ТЕХНОМАРТ">
         </a>
         <p class="search-items">
@@ -29,17 +30,23 @@
           <span>+7 (812) 555-05-55</span>
           <address class="company-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
-        <div class="user-info">
-          <p>
-            <a href="#" class="profile-button" aria-label="Профиль пользователя">
-              Равшан Джамшутович
-            </a>
-            <a href="#" class="exit-button" aria-label="Кпнока выхода"></a>
-          </p>
-          <p>
-            <a href="#" class="user-link orders">Мои заказы</a>
-            <a href="#" class="user-link account">Личный кабинет</a>
-          </p>
+        <div class="user-control authorized">
+          <div class="user-info">
+            <p>
+              <a href="#" class="profile-button" aria-label="Профиль пользователя">
+                Равшан Джамшутович
+              </a>
+              <a href="#" class="exit-button" aria-label="Кпнока выхода"></a>
+            </p>
+            <p>
+              <a href="#" class="user-link orders">Мои заказы</a>
+              <a href="#" class="user-link account">Личный кабинет</a>
+            </p>
+          </div>
+          <ul class="vertical-list log-in-out">
+            <li><a class="button button-login" href="#"><span>Войти</span></a></li>
+            <li><a class="button button-registration" href="#"><span>Регистрация</span></a></li>
+          </ul>
         </div>
 
       </section>
@@ -347,11 +354,13 @@
 
     <section class="modal modal-product-added">
       <p>
-        <span>Товар добавлен в корзину</span>
+        <span>Товар добавлен в корзину!</span>
       </p>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-      <a class="button button-modal-order">ОФОРМИТЬ ЗАКАЗ</a>
-      <button class="modal-close" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+      <div class="product-added-buttons">
+        <a class="button button-red button-modal-order">ОФОРМИТЬ ЗАКАЗ</a>
+        <button class="button continue-purchase" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+      </div>
     </section>
   </body>
 </html>

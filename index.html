@@ -11,7 +11,7 @@
   <body>
     <header class="main-header">
       <div class="controls-header">
-        <a href="#" class="logo" aria-label="логотип компании">
+        <a href="index.html" class="logo" aria-label="логотип компании">
           <img src="img/logo-technomart.svg" width="110" height="18" alt="ТЕХНОМАРТ">
         </a>
         <p class="search-items">
@@ -30,10 +30,24 @@
           <span>+7 (812) 555-05-55</span>
           <address class="company-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
-        <ul class="vertical-list log-in-out">
-          <li><a class="button button-login" href="#"><span>Войти</span></a></li>
-          <li><a class="button button-registration" href="#"><span>Регистрация</span></a></li>
-        </ul>
+        <div class="user-control">
+          <div class="user-info">
+            <p>
+              <a href="#" class="profile-button" aria-label="Профиль пользователя">
+                Равшан Джамшутович
+              </a>
+              <a href="#" class="exit-button" aria-label="Кпнока выхода"></a>
+            </p>
+            <p>
+              <a href="#" class="user-link orders">Мои заказы</a>
+              <a href="#" class="user-link account">Личный кабинет</a>
+            </p>
+          </div>
+          <ul class="vertical-list log-in-out">
+            <li><a class="button button-login" href="#"><span>Войти</span></a></li>
+            <li><a class="button button-registration" href="#"><span>Регистрация</span></a></li>
+          </ul>
+        </div>
       </section>
       <nav class="main-navigation">
         <ul class="vertical-list site-navigation">
@@ -63,27 +77,28 @@
             <p>Техника</p>
             <a href="#" class="button">Для стройки</a>
           </div>
-          <div class="services-slider">
-            <p>ДРЕЛИ</p>
-            <p>Соседям на радость!</p>
+          <section class="services-slider">
+            <input class="visually-hidden" type="radio" id="slider-1" name="slider-toggle">
+            <input class="visually-hidden" type="radio" id="slider-2" name="slider-toggle" checked>
+            <div class="slider-controls">
+              <label class="slider-controls-item slider-controls-item--1" for="slider-1">Первый</label>
+              <label class="slider-controls-item slider-controls-item--2" for="slider-2">Второй</label>
+            </div>
             <button class="arrow arrow-left"><span class="visually-hidden">Предыдущее изображение</span></button>
             <button class="arrow arrow-right"><span class="visually-hidden">Следующее изображение</span></button>
-            <a href="#" class="button button-red button-catalog">ОТКРЫТЬ КАТАЛОГ</a>
-            <ul class="slider-toggle">
-              <li>
-                <label>
-                  <input class="visually-hidden toggle-element" type="radio" name="slider-toggle" value="1">
-                  <div class="image-toggle"></div>
-                </label>
+            <ul class="slider-list">
+              <li class="slider-item">
+                <h3>ПЕРФОРАТОРЫ</h3>
+                <p>Настоящие мужские игрушки</p>
+                <a href="catalog.html" class="button button-red button-catalog">ОТКРЫТЬ КАТАЛОГ</a>
               </li>
-              <li>
-                <label>
-                  <input class="visually-hidden toggle-element" type="radio" name="slider-toggle" value="2" checked>
-                  <div class="image-toggle"></div>
-                </label>
+              <li class="slider-item">
+                <h3>ДРЕЛИ</h3>
+                <p>Соседям на радость!</p>
+                <a href="catalog.html" class="button button-red button-catalog">ОТКРЫТЬ КАТАЛОГ</a>
               </li>
             </ul>
-          </div>
+          </section>
           <div>
             <div class="service-card card-discounts">
               <p>Скидки 50%</p>
@@ -328,6 +343,17 @@
           <button class="button button-red button-write-us" type="submit">Отправить</button>
         </div>
       </form>
+    </section>
+
+    <section class="modal modal-product-added">
+      <p>
+        <span>Товар добавлен в корзину!</span>
+      </p>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <div class="product-added-buttons">
+        <a class="button button-red button-modal-order">ОФОРМИТЬ ЗАКАЗ</a>
+        <button class="button continue-purchase" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+      </div>
     </section>
   </body>
 </html>
