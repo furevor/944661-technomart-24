@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <title>Каталог</title>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <script src="js/scripts.js"></script>
   </head>
   <body>
     <header class="main-header">
@@ -14,7 +13,7 @@
         <a href="index.html" class="logo" aria-label="логотип компании">
           <img src="img/logo-technomart.svg" width="110" height="18" alt="ТЕХНОМАРТ">
         </a>
-        <p class="search-items">
+        <p class="search-form">
           <input id="search-items" type="text" placeholder="Поиск:">
           <label for="search-items" class="search-icon"></label>
         </p>
@@ -92,6 +91,7 @@
             <fieldset class="filter price">
               <legend class="filter-legend">ЦЕНА:</legend>
               <div class="range-price">
+                <button type="button" class="low-scroll"><span class="visually-hidden">левый ползунок цены</span></button>
                 <input type="range">
               </div>
               <div class="min-max-price">
@@ -362,5 +362,6 @@
         <button class="button continue-purchase" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
       </div>
     </section>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
