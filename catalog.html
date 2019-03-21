@@ -5,7 +5,7 @@
     <title>Каталог</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -18,9 +18,9 @@
             <input id="search-items" class="input-search" name="search-data" type="text" placeholder="Поиск:">
             <label for="search-items" class="search-icon"></label>
           </form>
-          <a href="#" class="bookmarks">Закладки: 0</a>
-          <a href="#" class="cart">Корзина: 0</a>
-          <a href="#" class="button button-order">Оформить заказ</a>
+          <a href="bookmarks.html" class="bookmarks">Закладки: 0</a>
+          <a href="cart.html" class="cart">Корзина: 0</a>
+          <a href="makeorder.html" class="button button-order">Оформить заказ</a>
         </div>
       </div>
       <div class="header-container">
@@ -84,8 +84,8 @@
             <a href="#" class="sort-type active-sort"><span>ПО ЦЕНЕ</span></a>
             <a href="#" class="sort-type"><span>ПО ТИПУ</span></a>
             <a href="#" class="sort-type"><span>ПО ФУНКЦИОНАЛУ</span></a>
-            <span class="sort-direction list-up active"></span>
-            <span class="sort-direction list-down"></span>
+            <a href="#" class="sort-direction list-up active" aria-label="сортировка по убыванию"></a>
+            <a href="#" class="sort-direction list-down" aria-label="сортировка по возрастанию"></a>
           </div>
         </div>
         <div class="main-content-wrapper">
@@ -110,35 +110,35 @@
                     <label>
                       <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" checked>
                       <span class="checkbox-indicator"></span>
-                      BOSCH
+                      <span class="checkbox-text">BOSCH</span>
                     </label>
                   </li>
                   <li>
                     <label>
                       <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol">
                       <span class="checkbox-indicator"></span>
-                      ИНТЕРСКОЛ
+                      <span class="checkbox-text">ИНТЕРСКОЛ</span>
                     </label>
                   </li>
                   <li>
                     <label>
                       <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" checked>
                       <span class="checkbox-indicator"></span>
-                      MAKITA
+                      <span class="checkbox-text">MAKITA</span>
                     </label>
                   </li>
                   <li>
                     <label>
                       <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt">
                       <span class="checkbox-indicator"></span>
-                      DEWALT
+                      <span class="checkbox-text">DEWALT</span>
                     </label>
                   </li>
                   <li>
                     <label>
                       <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi">
                       <span class="checkbox-indicator"></span>
-                      HITACHI
+                      <span class="checkbox-text">HITACHI</span>
                     </label>
                   </li>
                 </ul>
@@ -163,7 +163,7 @@
             <ul class="cards-list catalog-list">
               <li class="catalog-item">
                 <div class="actions">
-                  <a href="#" class="buy">Купить</a>
+                  <a href="buyproduct.html" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
                 </div>
                 <img src="img/perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -177,7 +177,7 @@
               </li>
               <li class="catalog-item">
                 <div class="actions">
-                  <a href="#" class="buy">Купить</a>
+                  <a href="buyproduct.html" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
                 </div>
                 <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -191,7 +191,7 @@
               </li>
               <li class="catalog-item new-item">
                 <div class="actions">
-                  <a href="#" class="buy">Купить</a>
+                  <a href="buyproduct.html" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
                 </div>
                 <img src="img/perforator_4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -206,7 +206,7 @@
               </li>
               <li class="catalog-item">
                 <div class="actions">
-                  <a href="#" class="buy">Купить</a>
+                  <a href="buyproduct.html" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
                 </div>
                 <img src="img/perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -220,7 +220,7 @@
               </li>
               <li class="catalog-item new-item">
                 <div class="actions">
-                  <a href="#" class="buy">Купить</a>
+                  <a href="buyproduct.html" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
                 </div>
                 <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -234,7 +234,7 @@
               </li>
               <li class="catalog-item">
                 <div class="actions">
-                  <a href="#" class="buy">Купить</a>
+                  <a href="buyproduct.html" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
                 </div>
                 <img src="img/perforator_4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -248,7 +248,7 @@
               </li>
               <li class="catalog-item new-item">
                 <div class="actions">
-                  <a href="#" class="buy">Купить</a>
+                  <a href="buyproduct.html" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
                 </div>
                 <img src="img/perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -262,7 +262,7 @@
               </li>
               <li class="catalog-item">
                 <div class="actions">
-                  <a href="#" class="buy">Купить</a>
+                  <a href="buyproduct.html" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
                 </div>
                 <img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -276,7 +276,7 @@
               </li>
               <li class="catalog-item">
                 <div class="actions">
-                  <a href="#" class="buy">Купить</a>
+                  <a href="buyproduct.html" class="buy">Купить</a>
                   <a href="#" class="bookmark">В закладки</a>
                 </div>
                 <img src="img/perforator_4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -370,6 +370,6 @@
         <button class="button continue-purchase" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
       </div>
     </section>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

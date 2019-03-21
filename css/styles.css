@@ -513,6 +513,10 @@ a {
   background-color: #293449;
 }
 
+.site-navigation a:active {
+  opacity: 0.5;
+}
+
 .site-navigation li:first-child a {
   padding-left: 55px;
 }
@@ -680,6 +684,11 @@ a {
   height: 10px;
   border-radius: 50%;
   background-color: #ffffff;
+}
+
+#slider-1:focus ~ .slider-controls .slider-controls-item--1::after,
+#slider-2:focus ~ .slider-controls .slider-controls-item--2::after {
+  box-shadow: 0 0 3px 3px #ee3643;
 }
 
 .slider-toggle {
@@ -914,6 +923,10 @@ a {
 
 .radio-toggle:not(checked):hover + label {
   background-color: #293449;
+}
+
+.radio-toggle:focus + label {
+  box-shadow: 0 0 3px 3px #475e85;
 }
 
 .content-toggle {
@@ -1676,8 +1689,17 @@ a {
   border-color: #c5c5c5;
 }
 
+.filter-input-checkbox:disabled ~ .checkbox-text {
+  color: #000000;
+  opacity: 0.4;
+}
+
 .filter-input-checkbox:checked:not(:disabled):hover + .checkbox-indicator {
   border-color: #b5b5b5;
+}
+
+.filter-input-checkbox:not(:disabled):focus + .checkbox-indicator {
+  box-shadow: 0 0 2px 2px #1b8fff;
 }
 
 .filter-input-checkbox:checked:not(:disabled):hover + .checkbox-indicator::before,
@@ -1774,6 +1796,10 @@ a {
   transition: .2s;
 }
 
+.radio:not(:disabled):focus + label:before {
+  box-shadow: 0 0 2px 2px #1b8fff;
+}
+
 .filter-option .radio:checked + label:after {
   opacity: 1;
 }
@@ -1783,6 +1809,12 @@ a {
   border-color: #b5b5b5;
   opacity: 0.3;
 }
+
+.radio:disabled + label {
+  color: #000000;
+  opacity: 0.4;
+}
+
 /* price styles (temp) */
 .breadcrumbs li:not(:first-child) {
   font-family: "PT Sans", sans-serif;
@@ -2152,6 +2184,14 @@ a {
   padding: 0;
 }
 
+.user-data-popup:hover {
+  border-color: #b5b5b5;
+}
+
+.user-data-popup:focus {
+  border-color: #ee3643;
+}
+
 .user-data-popup {
   width: 220px;
   height: 38px;
@@ -2165,6 +2205,8 @@ a {
   font-family: "PT Sans", sans-serif;
   color: #a9a9a9;
 }
+
+
 
 .user-input-label {
   font-size: 18px;
