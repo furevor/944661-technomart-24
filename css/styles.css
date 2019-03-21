@@ -486,7 +486,7 @@ a {
   box-shadow: inset 0 -5px 0 #293449;
 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .site-navigation li {
@@ -497,7 +497,7 @@ a {
   text-align: center;
   font-size: 17px;
   color: white;
-  padding: 20px 25px;
+  padding: 18px 30px 21px;
 }
 
 .site-navigation a:hover {
@@ -505,7 +505,7 @@ a {
 }
 
 .site-navigation li:first-child a {
-  padding-left: 50px;
+  padding-left: 55px;
 }
 
 .site-navigation li:last-child a {
@@ -513,7 +513,6 @@ a {
 }
 
 .main-navigation {
-  display: flex;
   margin-bottom: 65px;
 }
 /* header styles --> */
@@ -845,8 +844,6 @@ a {
 
 .services p {
   margin: 0;
-  font-size: 14px;
-  line-height: 24px;
 }
 
 .services {
@@ -855,34 +852,28 @@ a {
 }
 
 .container-services {
-  padding: 68px 0;
+  padding: 65px 0 7px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.container-services::before {
-  content: "";
-  background-image: url("../img/layer-separator.png");
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 10px;
-  height: 268px;
-  left: 362px;
-  top: 195px;
+.container-services p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", sans-serif;
 }
 
 .services-header h2 {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   font-size: 30px;
   line-height: 30px;
 }
 
 .services-header {
   width: 398px;
-  height: 96px;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
   align-self: flex-start;
 }
 
@@ -893,9 +884,21 @@ a {
   color: #32425c;
 }
 
+.services-content::before {
+  content: "";
+  background-image: url("../img/layer-separator.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 10px;
+  height: 268px;
+  left: 232px;
+  top: 195px;
+}
+
 .content-toggle label {
-  padding: 16px 145px 16px 23px;
+  padding: 16px 140px 16px 23px;
   font-size: 21px;
+  font-weight: 700;
   font-family: "Cuprum", sans-serif;
   line-height: 30px;
   color: #ffffff;
@@ -926,18 +929,19 @@ a {
 
 .toggle h3 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 36px;
   line-height: 36px;
 }
 
 .toggle p {
   max-width: 275px;
+  color: #000000;
 }
 
 .services-delivery {
   background-image: url("../img/lorry.png");
-  background-position: right 0 top 20px;
+  background-position: right 0 top 25px;
   background-repeat: no-repeat;
 }
 
@@ -961,10 +965,10 @@ a {
 }
 
 .info-about p {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 24px;
-  font-weight: 700;
   margin: 0;
+  font-family: "PT Sans", sans-serif;
 }
 
 .about p:nth-child(2) {
@@ -1511,8 +1515,9 @@ a {
 
 .product-description p {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 24px;
+  font-family: "PT Sans", sans-serif;
 
 }
 
@@ -1537,7 +1542,6 @@ a {
   line-height: 18px;
   font-family: "PT Sans", sans-serif;
   color: #000000;
-  font-weight: 700;
 }
 
 .pagination li:last-child a {
@@ -1792,7 +1796,6 @@ a {
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", sans-serif;
-  font-weight: 700;
 }
 
 .filter-name {
