@@ -149,6 +149,14 @@ a {
   box-sizing: border-box;
 }
 
+.search-form input::-moz-placeholder {
+  opacity: 1;
+}
+
+.search-form input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
 .search-icon {
   position: absolute;
 
@@ -1589,7 +1597,7 @@ a {
 .filter-legend {
   font-size: 17px;
   line-height: 17px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   color: #000000;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -1855,6 +1863,10 @@ a {
   text-align: center;
 }
 
+.min-max-price input:last-child {
+  margin-left: 25px;
+}
+
 .sort-types {
   width: 700px;
   height: 38px;
@@ -2031,6 +2043,7 @@ a {
   border-color: transparent;
   color: transparent;
   border-width: 2px 0;
+  margin-top: 15px;
 }
 
 .range-price input::-ms-fill-lower {
