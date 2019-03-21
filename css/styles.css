@@ -707,7 +707,7 @@ a {
 
 .services-slider p {
   margin: 0;
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;
   color: #ffffff;
   font-size: 18px;
   line-height: 24px;
