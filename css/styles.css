@@ -273,7 +273,7 @@ a {
 
 .intro-title {
   width: 940px;
-  margin: 0 auto 39px;
+  margin: 0 auto 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -326,7 +326,7 @@ a {
   color: #e9292a;
   border: 3px white solid;
   padding: 9px 47px 8px 72px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .user-control {
@@ -513,7 +513,7 @@ a {
 }
 
 .main-navigation {
-  margin-bottom: 65px;
+  margin-bottom: 62px;
 }
 /* header styles --> */
 
@@ -529,7 +529,7 @@ a {
 }
 
 .basic-services {
-  padding: 60px 0 55px;
+  padding: 58px 0 52px;
 }
 
 .services-container {
@@ -780,10 +780,6 @@ a {
   background-position: top 31px right 31px;
 }
 
-.popular-products {
-  margin-bottom: 20px;
-}
-
 .popular-manufacturers {
   margin-bottom: 65px;
 }
@@ -815,8 +811,8 @@ a {
 
 .header-wrapper {
   height: 90px;
-  padding: 0 30px 0 24px;
-  margin-bottom: 20px;
+  padding: 0 24px 0 28px;
+  margin-bottom: 18px;
   background-color: #f9f5f0;
   display: flex;
   justify-content: space-between;
@@ -961,7 +957,7 @@ a {
 .info-about {
   display: flex;
   justify-content: space-between;
-  padding: 80px 0 86px;
+  padding: 76px 0 86px;
 }
 
 .info-about p {
@@ -988,7 +984,6 @@ a {
 
 .about {
   width: 540px;
-  padding: 0 10px;
 }
 
 .about a {
@@ -1027,7 +1022,6 @@ a {
 
 .contacts-map {
   width: 300px;
-  padding: 0 10px;
 }
 
 .contacts-map p {
@@ -1290,6 +1284,10 @@ a {
   margin-bottom: 20px;
 }
 
+.breadcrumbs {
+  margin: 20px 0;
+}
+
 .breadcrumbs a,
 .breadcrumbs .breadcrumbs-current {
   text-transform: uppercase;
@@ -1347,9 +1345,10 @@ a {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 22px;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .catalog-item .actions {
@@ -1567,7 +1566,7 @@ a {
   margin: 0;
   padding: 0;
   border: 0;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   border-bottom: 1px #e5e5e5 solid;
 }
 
@@ -1767,7 +1766,7 @@ a {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
-  padding-left: 40px;
+  padding-left: 36px;
   position: relative;
 }
 
@@ -1778,7 +1777,7 @@ a {
   width: 8px;
   height: 12px;
 
-  left: 15px;
+  left: 12px;
   top: 2px;
 }
 
@@ -1815,7 +1814,7 @@ a {
 
 .range-price {
   background-color: #f7f3ec;
-  margin-top: 35px;
+  margin-top: 33px;
   height: 80px;
   margin-bottom: 10px;
 
