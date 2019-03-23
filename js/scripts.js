@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", function(){
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+
+      var modals = document.querySelectorAll('.modal-show');
+      for(var i = 0; i < modals.length; i++) {
+        modals[i].classList.remove("modal-show");
+        modals[i].classList.remove("modal-error");
+      }
+    }
+  });
+
   initializeRadioInputs();
 
   var writeUsLink = document.querySelector(".btn-write-us-open");
@@ -6,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function(){
   var buyProduct = document.querySelectorAll(".buy");
 
   assignModalOpen(writeUsLink, ".modal-write-us");
+  assignFormError(".modal-write-us");
+
   assignModalOpen(mapLink, ".modal-map");
   assignModalProductsOpen(buyProduct, ".modal-product-added");
 
@@ -13,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function assignModalOpen(buttonOpen, modalToOpen) {
   if(buttonOpen) {
-
     var popup = document.querySelector(modalToOpen);
     var modalClose = popup.querySelector(".modal-close");
     assignModalClose(modalClose, popup);
@@ -25,6 +39,25 @@ function assignModalOpen(buttonOpen, modalToOpen) {
   }
 }
 
+function assignFormError(modalWithForm) {
+  var modal = document.querySelector(modalWithForm);
+  if(modal) {
+    var writeUsForm = modal.querySelector("form");
+    var login = writeUsForm.querySelector("[name=user-name]");
+    var email = writeUsForm.querySelector("[name=user-email]");
+    var letter = writeUsForm.querySelector("[name=user-letter]");
+
+    writeUsForm.addEventListener("submit", function (evt) {
+      if (!login.value || !email.value || !letter.value) {
+        evt.preventDefault();
+        modal.classList.remove("modal-error");
+        modal.offsetWidth = modal.offsetWidth;
+        modal.classList.add("modal-error");
+      }
+    });
+  }
+}
+
 function assignModalProductsOpen(buttonOpen, modalToOpen) {
   if(buttonOpen) {
 
@@ -32,12 +65,12 @@ function assignModalProductsOpen(buttonOpen, modalToOpen) {
     var modalClose = popup.querySelector(".modal-close");
     assignModalClose(modalClose, popup);
 
-    buttonOpen.forEach(function (item) {
-      item.onclick = function (evt) {
+    for(var i = 0; i < buttonOpen.length; i++) {
+      buttonOpen[i].onclick = function (evt) {
         evt.preventDefault();
         popup.classList.add("modal-show");
       };
-    })
+    }
   }
 }
 
@@ -45,6 +78,7 @@ function assignModalClose(modalClose, popup) {
   modalClose.onclick = function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
   };
 }
 
